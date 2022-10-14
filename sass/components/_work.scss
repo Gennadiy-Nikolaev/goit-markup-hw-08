@@ -2,6 +2,11 @@
 .box {
     padding-top: 0;
 }
+@media screen and (min-width: 480px) and (max-width:1200px){
+    .box{
+        display: none;
+    }
+}
 .box__title {
     margin-bottom: 50px;
     color: $primary-text-color;
