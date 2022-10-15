@@ -23,10 +23,8 @@
   &:active {
       background-color: $button-color;             
         }              
-}
 @media screen and (min-width: 1200px){
-  .hero__button {
-min-width: 216px;
+  min-width: 216px;
   }
 }
 .form__button {
