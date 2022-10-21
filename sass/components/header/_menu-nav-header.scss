@@ -9,7 +9,7 @@
 .menu-nav__item {
   margin-right: 20px;
   position: relative;
-  &::before {
+  &:not(:first-child)::before {
     display: block;
     position: absolute;
     content: '';
@@ -19,6 +19,9 @@
     top: 8px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     transform: rotate(90deg);
+    &:first-child {
+      content: none;
+    }
   }
 }
 
