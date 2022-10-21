@@ -25,37 +25,93 @@
     <header class="page-header">
       <div class="container header-nav">
         <a href="/" class="logo">Web<span class="studio">Studio</span></a>
-        <nav class="main-nav">         
-          <ul class="site-nav list">
-            <li class="site-nav__item">
-              <a href="./index.html" class="site-nav__link site-nav__item--current">Студія</a>
-            </li>
-            <li class="site-nav__item">
-              <a href="./portfolio.html" class="site-nav__link ">Портфоліо</a>
-            </li>
-            <li class="site-nav__item">
-              <a href="" class="site-nav__link">Контакти</a>
-            </li>
-          </ul>
+        <nav class="main-nav">
+          <button
+            class="menu-toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg
+              width="24"
+              height="24"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+          <!--<button class="main-nav__button is-open" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+            <svg class="main-nav__icon" width="40" height="40" aria-label="Вимикач мобільного меню">
+              <use class="main-nav__close" href="./images/icons.svg#close"></use>
+              <use class="main-nav__menu" href="./images/icons.svg#menu_mobile"></use>
+            </svg>
+          </button>       
+          <div class="menu-container" id="menu-container" data-menu>-->
+          <div class="menu-container js-menu-container" id="mobile-menu">
+            <button class="menu-toggle menu-toggle--close js-close-menu">
+              <svg
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+            <ul class="site-nav list">
+              <li class="site-nav__item">
+                <a href="./index.html" class="site-nav__link site-nav__item--current">Студія</a>
+              </li>
+              <li class="site-nav__item">
+                <a href="./portfolio.html" class="site-nav__link">Портфоліо</a>
+              </li>
+              <li class="site-nav__item">
+                <a href="" class="site-nav__link">Контакти</a>
+              </li>
+            </ul>
+            <!--Mail+tel-->
+            <ul class="auth-nav list">
+              <li class="auth-nav__item">
+                <a href="mailto:info@devstudio.com" class="auth-nav__link auth-nav__link--m">
+                  <svg class="auth-nav__icon" height="12" width="16">
+                    <use href="./images/icons.svg#envelope"></use></svg
+                  >info@devstudio.com
+                </a>
+              </li>
+              <li class="auth-nav__item">
+                <a href="tel:+380961111111" class="auth-nav__link auth-nav__link--t">
+                  <svg class="auth-nav__icon" height="16" width="10">
+                    <use href="./images/icons.svg#smartphone"></use></svg
+                  >+38 096 111 11 11
+                </a>
+              </li>
+            </ul>
+            <ul class="menu-nav list">
+              <li class="menu-nav__item">
+                <a href="#" class="menu-nav__link">Instagram</a>
+              </li>
+              <li class="menu-nav__item">
+                <a href="#" class="menu-nav__link">Twitter</a>
+              </li>
+              <li class="menu-nav__item">
+                <a href="#" class="menu-nav__link">Facebook</a>
+              </li>
+              <li class="menu-nav__item">
+                <a href="#" class="menu-nav__link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
         </nav>
-
-        <!--Mail+tel-->
-        <ul class="auth-nav list">
-          <li class="auth-nav__item">
-            <a href="mailto:info@devstudio.com" class="auth-nav__link">
-              <svg class="auth-nav__icon" height="12" width="16">
-                <use href="./images/icons.svg#envelope"></use></svg
-              >info@devstudio.com
-            </a>
-          </li>
-          <li class="auth-nav__item">
-            <a href="tel:+380961111111" class="auth-nav__link">
-              <svg class="auth-nav__icon" height="16" width="10">
-                <use href="./images/icons.svg#smartphone"></use></svg
-              >+38 096 111 11 11
-            </a>
-          </li>
-        </ul>
       </div>
     </header>
     <main>
@@ -63,9 +119,7 @@
       <section class="hero">
         <div class="container">
           <h1 class="hero__title">ЕФЕКТИВНІ РІШЕННЯ ДЛЯ ВАШОГО БІЗНЕСУ</h1>
-          <button type="button" class="hero__button" data-modal-open>
-            Замовити послугу
-          </button>
+          <button type="button" class="hero__button" data-modal-open>Замовити послугу</button>
         </div>
       </section>
 
@@ -77,15 +131,13 @@
             <li class="feature__item icon-antenna">
               <h3 class="feature__title">УВАГА ДО ДЕТАЛЕЙ</h3>
               <p class="feature__post">
-                Ідейні міркування, і навіть початок повсякденної роботи з
-                формування позиції.
+                Ідейні міркування, і навіть початок повсякденної роботи з формування позиції.
               </p>
             </li>
             <li class="feature__item icon-clock">
               <h3 class="feature__title">ПУНКТУАЛЬНІСТЬ</h3>
               <p class="feature__post">
-                Завдання організації, особливо рамки і місце навчання кадрів
-                тягне у себе.
+                Завдання організації, особливо рамки і місце навчання кадрів тягне у себе.
               </p>
             </li>
             <li class="feature__item icon-diagram">
@@ -97,8 +149,7 @@
             <li class="feature__item icon-astronaut">
               <h3 class="feature__title">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
               <p class="feature__post">
-                Значимість цих проблем настільки очевидна, що реалізація
-                планових завдань.
+                Значимість цих проблем настільки очевидна, що реалізація планових завдань.
               </p>
             </li>
           </ul>
@@ -370,14 +421,10 @@
                   </a>
                 </li>
                 <li class="contact__item">
-                  <a href="mailto:info@devstudio.com" class="contact__link"
-                    >info@devstudio.com</a
-                  >
+                  <a href="mailto:info@devstudio.com" class="contact__link">info@devstudio.com</a>
                 </li>
                 <li class="contact__item">
-                  <a href="tel:+380961111111" class="contact__link"
-                    >+38 096 111 11 11</a
-                  >
+                  <a href="tel:+380961111111" class="contact__link">+38 096 111 11 11</a>
                 </li>
               </ul>
             </address>
@@ -469,12 +516,7 @@
           <div class="form__field">
             <label for="tel" class="form__label">Телефон</label>
             <div class="form__overlay">
-              <input
-                type="tel"
-                name="phone_number"
-                id="tel"
-                class="form__input"
-              />
+              <input type="tel" name="phone_number" id="tel" class="form__input" />
               <svg class="form__icon">
                 <use href="./images/icons.svg#phone"></use>
               </svg>
@@ -500,13 +542,7 @@
             ></textarea>
           </div>
           <div class="form__checkbox">
-            <input
-              class="form__hidden"
-              type="checkbox"
-              name="policy"
-              id="policy"
-              required
-            />
+            <input class="form__hidden" type="checkbox" name="policy" id="policy" required />
             <label for="policy">
               <span class="form__gal"
                 ><svg class="form__ico" height="8" width="11">
@@ -522,5 +558,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
