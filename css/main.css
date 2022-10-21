@@ -210,7 +210,6 @@ img {
 }
 
 .header-nav {
-  outline: 1px solid tomato;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -220,7 +219,6 @@ img {
 }
 
 .main-nav {
-  outline: 1px solid blue;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -250,11 +248,11 @@ img {
 @media screen and (max-width: 767px) {
   .menu-container {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    min-height: 100vh;
     padding: 48px 40px;
     background-color: #fff;
     z-index: 999;
@@ -318,16 +316,9 @@ img {
   list-style: none;
 }
 
-.main-nav__button .main-nav__close {
-  display: none;
-}
-
-.main-nav__button.is-open .main-nav__close {
-  display: block;
-}
-
-.main-nav__button.is-open .main-nav__menu {
-  display: none;
+.main-nav__close {
+  width: 18px;
+  height: 18px;
 }
 
 /*logo*/
@@ -476,6 +467,25 @@ img {
   }
 }
 
+@media screen and (max-width: 767px) {
+  .auth-nav__item--m {
+    font-size: 24px;
+    line-height: 1.16;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+@media screen and (max-width: 767px) {
+  .auth-nav__item--t {
+    font-size: 34px;
+    line-height: 1.17;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+
 .auth-nav__link {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -494,18 +504,6 @@ img {
 @media screen and (max-width: 767px) {
   .auth-nav__link {
     padding: 16px 0px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .auth-nav__link--m {
-    font-size: 24px;
-    line-height: 1.16;
-  }
-}
-@media screen and (max-width: 767px) {
-  .auth-nav__link--t {
-    font-size: 34px;
-    line-height: 1.17;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -563,7 +561,7 @@ img {
   margin-right: 20px;
   position: relative;
 }
-.menu-nav__item::before {
+.menu-nav__item:not(:first-child)::before {
   display: block;
   position: absolute;
   content: "";
@@ -574,6 +572,9 @@ img {
   border: 1px solid rgba(33, 33, 33, 0.2);
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
+}
+.menu-nav__item:not(:first-child)::before:first-child {
+  content: none;
 }
 
 .menu-nav__link {
