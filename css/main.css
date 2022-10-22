@@ -128,6 +128,8 @@ img {
 
 /*markup*/
 .container {
+  margin-left: auto;
+  margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
   outline: 1px solid orange;
@@ -140,12 +142,12 @@ img {
 }
 @media screen and (min-width: 768px) {
   .container {
-    width: 768px;
+    max-width: 768px;
   }
 }
 @media screen and (min-width: 1200px) {
   .container {
-    width: 1200px;
+    max-width: 1200px;
   }
 }
 
@@ -594,7 +596,6 @@ img {
 .hero {
   height: 600px;
   max-width: 1600px;
-  margin: 0 auto;
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
@@ -617,14 +618,13 @@ img {
 }
 @media screen and (min-width: 768px) {
   .hero__title {
-    width: 360px;
     font-size: 26px;
     line-height: 1.61;
   }
 }
 @media screen and (min-width: 1200px) {
   .hero__title {
-    width: 696px;
+    max-width: 696px;
     font-size: 44px;
     line-height: 1.36;
   }
