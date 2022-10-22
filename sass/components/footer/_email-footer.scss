@@ -1,9 +1,5 @@
 /*email-footer*/
-.email {
-  @media screen and (max-width: 767px) {
-    //margin-left: auto;
-    //margin-right: auto;
-  }
+.email {  
   @media screen and (min-width: 1200px) {
     margin-left: auto;
   }
@@ -34,8 +30,9 @@
 }
 
 .email__input {
-  margin-right: 12px;
-  max-width: 358px;
+  width: 100%;
+  max-width: 450px;
+  margin-right: 12px;  
   height: 50px;
   padding: 15px 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -51,12 +48,7 @@
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
   }
-
-  @media screen and (max-width: 767px) {
-   margin-left: auto;
-   margin-right: auto;
-  }
-}
+ }
 
 .email__button {
   display: block;
