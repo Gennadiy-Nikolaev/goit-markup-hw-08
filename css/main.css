@@ -1433,7 +1433,7 @@ img {
 /*Modal window*/
 .modal {
   position: absolute;
-  width: 450px;
+  max-width: 450px;
   height: 609px;
   top: 50%;
   left: 50%;
@@ -1454,7 +1454,7 @@ img {
 }
 @media screen and (man-width: 1199px) {
   .modal {
-    width: 450px;
+    max-width: 450px;
     height: 609px;
   }
 }
